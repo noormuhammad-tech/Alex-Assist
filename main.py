@@ -41,7 +41,7 @@ def processCommand(c):
         link = musicLibrary.music[song]
         webbrowser.open(link)
     else:
-        # If command is not recognized, let AI handle it
+        # If command is not predefined, Ai will handle it
         output = aiProcess(c)
         speak(output)
         
@@ -51,7 +51,7 @@ def processCommand(c):
 if __name__ == "__main__":
     speak("Initializing Alex....")
     while True:
-        #Listen for the wake word jarvis
+        #Listen for the wake word Alex
         # obtain audio from the microphone
         r = sr.Recognizer()
 
@@ -69,7 +69,7 @@ if __name__ == "__main__":
                     print("Alex active...")
                     audio = r.listen(source,timeout=3,phrase_time_limit=2)
                     command = r.recognize_google(audio)
-                    # print(command)
+                    
 
                     processCommand(command)
                     
