@@ -19,6 +19,7 @@ A Python-based AI voice assistant that listens to your voice, understands comman
 2. When it hears **"Hello"**, it replies **"Ya"** and starts listening for a command
 3. If the command matches a built-in action (open a site, play a song) — it does it
 4. If the command is not recognized — it sends it to OpenAI and speaks the AI response
+5. AI response is spoken aloud.
 
 ---
 
